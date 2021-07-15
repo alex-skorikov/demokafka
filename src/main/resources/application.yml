@@ -1,0 +1,23 @@
+server:
+  port: 9000
+
+bet:
+  kafka:
+    producer:
+      bootstrap: localhost:9092
+    consumers:
+      referal:
+        topic: referal
+      comission:
+        topic: comission
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create
